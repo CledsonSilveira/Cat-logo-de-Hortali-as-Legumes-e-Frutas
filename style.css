@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Arial";
+  gap: 16px;
+  position: relative; /* Necessário para o pseudo-elemento */
+}
+
+body::before {
+  content: ""; /* Elemento sem conteúdo */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/fundo.jpg");
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  /*opacity: 0.8; /* Ajuste a transparência */
+  z-index: -1; /* Mantém o fundo atrás do conteúdo */
+}
+
+
+h7 {
+  position: fixed; /* Mantém o título sempre fixo */
+  top: 8%; /* Alinha no topo da tela */
+  text-align: center;
+  font-size: 4vw; /*com "vw" torna o texto responsivo*/
+  color: #9ceeae;
+  margin-bottom: 20px;
+  font-weight: bold; /* Deixa o texto em negrito */
+  text-shadow: -2px -2px 0px #5ab86e;
+}
+
+
+h8 {
+  position: fixed; /* Mantém o título sempre fixo */
+  top: 18%; /* Alinha no topo da tela */
+  text-align: center;
+  font-size: 1.5vw; /*com "vw" torna o texto responsivo*/
+  color: #9ceeae;
+  margin-bottom: 20px;
+  text-shadow: -2px -2px 0px #5ab86e;
+}
+
+h9 {
+  position: fixed; /* Mantém o título sempre fixo */
+  top: 72%; /* Alinha no topo da tela */
+  text-align: center;
+  font-size: 1.5vw; /*com "vw" torna o texto responsivo*/
+  color: #9ceeae;
+  margin-bottom: 20px;
+  text-shadow: -2px -2px 0px #5ab86e;
+}
+.link_personalizado {
+    color: #fff;
+    text-shadow: -2px -2px 0px #5ab86e;
+}
+.card {
+  background-color: #fff;
+  width: 180px;
+  height: 240px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px #aaaa;
+}
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 140px;
+    height: auto;
+  }
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  height: auto;
+}
+.card h1 {
+  font-size: 1.2vw; /*com "vw" torna o texto responsivo*/
+}
+.card h2 {
+  font-size: 1vw; /*com "vw" torna o texto responsivo*/
+  color: #aaaa;
+}
+.card button {
+  background-color: #5ab86e;
+  height: auto;
+  border: none;
+  padding: 4px;
+  width: 9;
+  color: #fff;
+  font-size: 1.5vw; /*com "vw" torna o texto responsivo*/
+  font-weight: bold;
+  border-radius: 4px;
+}
+.card button:hover {
+  background-color: #72e48b;
+  cursor: pointer;
+}
